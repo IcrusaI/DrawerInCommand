@@ -1,0 +1,34 @@
+<div class="canvas_container">
+  <div class="canvas_wrap">
+    <canvas
+      #canvas
+      (mousemove)="mouseMove($event)"
+      (mouseleave)="mouseLeave()"
+      (window:resize)="onResize()"
+    ></canvas>
+
+    <div class="window_wrap">
+      <app-tabs>
+        <app-tab tabTitle="Shapes">
+          <ul class="window_command">
+            <li *ngFor="let shape of shapes; let i = index">
+              <span>{{ shape.toString() }}</span>
+              <button (click)="deleteShape(i)">Delete</button>
+            </li>
+          </ul>
+        </app-tab>
+        <app-tab tabTitle="History">Hey23</app-tab>
+        <app-tab tabTitle="Documentation">Hey34</app-tab>
+      </app-tabs>
+
+      <form [formGroup]="commandForm" (ngSubmit)="onSubmit(commandForm.value)">
+        <label>
+          command:
+          <input type="text" required formControlName="command" />
+        </label>
+        <input type="submit" />
+        <span>{{ coordinatesCursor }}</span>
+      </form>
+    </div>
+  </div>
+</div>

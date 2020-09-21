@@ -1,0 +1,6 @@
+<ul class="tabs-wrap">
+  <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [ngClass]="{'active': tab.active}">
+    {{tab.tabTitle}}
+  </li>
+</ul>
+<ng-content></ng-content>

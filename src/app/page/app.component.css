@@ -1,0 +1,68 @@
+*{
+  box-sizing: border-box;
+}
+.canvas_container{
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+}
+.canvas_wrap{
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  display: flex;
+}
+canvas {
+  height: 100%;
+  width: 100%;
+}
+.window_wrap{
+  height: 100%;
+  border-left: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #000;
+  width: 400px;
+}
+.window_command{
+  height: 100%;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px;
+  overflow: auto;
+}
+.window_command li{
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+}
+.window_command li:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.window_wrap form{
+  border: 2px solid #000;
+  border-radius: 5px;
+  background: #000;
+}
+.window_wrap form label{
+  color: #fff;
+  font-size: 18px;
+}
+.window_wrap form label input{
+  margin: 5px 0 10px;
+  width: 100%;
+}
+.window_wrap form span{
+  color: #fff;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+app-tabs {
+  height: 100%;
+}
