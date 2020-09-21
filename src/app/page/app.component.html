@@ -17,8 +17,57 @@
             </li>
           </ul>
         </app-tab>
-        <app-tab tabTitle="History">Hey23</app-tab>
-        <app-tab tabTitle="Documentation">Hey34</app-tab>
+        <app-tab tabTitle="Documentation">
+          <ul class="window_documentation">
+            <li>
+              line
+              <br>
+              <ul>
+                <li>-p [50, 50] [100, 100]</li>
+                <li>-c rgb(255, 0, 0)</li>
+              </ul>
+            </li>
+            <li>
+              rectangle
+              <br>
+              <ul>
+                <li>-p [50, 50] [100, 100]</li>
+                <li>-c rgb(255, 0, 0)</li>
+                <li>-b rgba(255, 0, 0, 0.3)</li>
+              </ul>
+            </li>
+            <li>
+              triangle
+              <br>
+              <ul>
+                <li>-p [50, 50] [50, 100] [100, 100]</li>
+                <li>-c rgb(255, 0, 0)</li>
+                <li>-b rgba(255, 0, 0, 0.3)</li>
+              </ul>
+            </li>
+            <li>
+              circle
+              <br>
+              <ul>
+                <li>-p [75, 75]</li>
+                <li>-r 25</li>
+                <li>-c rgb(255, 0, 0)</li>
+                <li>-b rgba(255, 0, 0, 0.3)</li>
+              </ul>
+            </li>
+            <li>
+              ellipse
+              <br>
+              <ul>
+                <li>-p [75, 75]</li>
+                <li>-rx 25</li>
+                <li>-ry 50</li>
+                <li>-c rgb(255, 0, 0)</li>
+                <li>-b rgba(255, 0, 0, 0.3)</li>
+              </ul>
+            </li>
+          </ul>
+        </app-tab>
       </app-tabs>
 
       <form [formGroup]="commandForm" (ngSubmit)="onSubmit(commandForm.value)">
